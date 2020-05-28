@@ -144,5 +144,5 @@ if settings.phase == 'training':
         LOGGER.info('Training done ...')
 elif settings.phase == 'testing':
     model.restore_model('checkpoints-40000')
-    testing_dataset = Dataset(settings, None, phase='test')
+    testing_dataset = Dataset(settings, None, phase='test')#iterator,imagesize(1,406,1260,3),normalized
     model.run_inference_on_test(testing_dataset)
